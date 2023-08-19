@@ -1,0 +1,136 @@
+.calendar {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  
+.days-of-week {
+    display: flex;
+    flex-wrap: wrap; /* Allow day names to wrap to the next line */
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  .days-of-week div {
+    flex-basis: calc(100% / 7);
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    word-break: break-word;
+    position: relative;
+  }
+  
+  .days-of-week div::before {
+    content: attr(data-abbreviated-name);
+    font-size: 14px;
+    display: none;
+  }
+  
+  .week {
+    display: flex; /* Display days in a row */
+    justify-content: space-between; /* Space evenly within the week */
+  }
+  
+  .date-cell {
+    flex-basis: calc(100% / 7); /* Each day cell takes up 1/7 of the week */
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+  }
+  
+  .date {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .event {
+    background-color: #f2f2f2;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  
+  .event-title {
+    font-weight: bold;
+  }
+  
+  .event-time {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .week.has-events {
+    background-color: #f90505; /* Highlight weeks with events in red */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .event-details {
+    margin-top: 20px;
+  }
+  
+  .event-detail {
+    background-color: #f2f2f2;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 600px) {
+  
+    .date-cell {
+      height: 80px;
+      
+    }
+  
+    .date {
+      font-size: 16px;
+    }
+    .days-of-week div::before {
+        content: attr(data-abbreviated-name); /* Use abbreviated day names */
+        font-size: 12px; /* Adjust the font size for mobile */
+        display: block; /* Display abbreviated day names on mobile */
+      }
+      .days-of-week div {
+        font-size: 0; /* Hide the full day names on mobile */
+      }
+      .event {
+        font-size: 12px; /* Adjust the font size for mobile */
+        padding: 3px; /* Adjust the padding for mobile */
+        margin-top: 3px; /* Adjust the margin for mobile */
+      }
+    
+      .event-title {
+        font-weight: bold;
+      }
+    
+      .event-time {
+        font-size: 8px; /* Adjust the font size for mobile */
+        color: #666;
+      }
+  }
+
+  .current-day {
+    border: 2px solid #007bff; /* Add a blue border to the current day */
+    color: inherit; /* Inherit the text color from the parent */
+    padding: 8px; /* Add some padding to maintain spacing */
+  }

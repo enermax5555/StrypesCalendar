@@ -141,6 +141,9 @@
   color: inherit;
   padding: 8px;
 }
+.current-day:hover {
+  border-color: #007bff; /* Change to a darker color on hover */
+}
 
 .popup {
   position: absolute;

@@ -55,6 +55,10 @@
   height: 100px;
 }
 
+.date-cell:hover {
+  border-color: #7d7c7c; /* Change to a darker color on hover */
+}
+
 .date {
   font-size: 18px;
   font-weight: bold;

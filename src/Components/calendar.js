@@ -135,7 +135,7 @@ const Calendar = () => {
     <div className="calendar">
       <h1>Strypes Calendar</h1>
       <div className="header">
-        {/* To get the correct month! */}
+        {/* To get the correct month/year! */}
         {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
       </div>
       <div className="days-of-week">

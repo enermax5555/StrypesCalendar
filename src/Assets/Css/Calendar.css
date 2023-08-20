@@ -1,136 +1,180 @@
 .calendar {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
 .days-of-week {
-    display: flex;
-    flex-wrap: wrap; /* Allow day names to wrap to the next line */
-    justify-content: space-between;
-    background-color: #eee;
-    padding: 5px;
-    font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #eee;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.days-of-week div {
+  flex-basis: calc(100% / 7);
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  word-break: break-word;
+  position: relative;
+}
+
+.days-of-week div::before {
+  content: attr(data-abbreviated-name);
+  font-size: 14px;
+  display: none;
+}
+
+.week {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-cell {
+  flex-basis: calc(100% / 7);
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.event {
+  background-color: #f2f2f2;
+  padding: 5px;
+  border-radius: 4px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.event-title {
+  font-weight: bold;
+}
+
+.event-time {
+  font-size: 12px;
+  color: #666;
+}
+
+.week.has-events {
+  background-color: #f90505;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.event-details {
+  margin-top: 20px;
+}
+
+.event-detail {
+  background-color: #f2f2f2;
+  padding: 5px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+
+  .date-cell {
+    height: 80px;
+
   }
-  
-  .days-of-week div {
-    flex-basis: calc(100% / 7);
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    word-break: break-word;
-    position: relative;
+
+  .date {
+    font-size: 16px;
   }
-  
+
   .days-of-week div::before {
     content: attr(data-abbreviated-name);
-    font-size: 14px;
-    display: none;
+    font-size: 12px;
+    display: block;
   }
-  
-  .week {
-    display: flex; /* Display days in a row */
-    justify-content: space-between; /* Space evenly within the week */
+
+  .days-of-week div {
+    font-size: 0;
   }
-  
-  .date-cell {
-    flex-basis: calc(100% / 7); /* Each day cell takes up 1/7 of the week */
-    border: 1px solid #ccc;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-  }
-  
-  .date {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
+
   .event {
-    background-color: #f2f2f2;
-    padding: 5px;
-    border-radius: 4px;
-    margin-top: 5px;
+    font-size: 12px;
+    padding: 3px;
+    margin-top: 3px;
   }
-  
+
   .event-title {
     font-weight: bold;
   }
-  
+
   .event-time {
-    font-size: 12px;
+    font-size: 8px;
     color: #666;
   }
-  
-  .week.has-events {
-    background-color: #f90505; /* Highlight weeks with events in red */
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .event-details {
-    margin-top: 20px;
-  }
-  
-  .event-detail {
-    background-color: #f2f2f2;
-    padding: 5px;
-    border-radius: 4px;
-    margin-top: 5px;
-  }
-  
-  /* Media query for smaller screens */
-  @media (max-width: 600px) {
-  
-    .date-cell {
-      height: 80px;
-      
-    }
-  
-    .date {
-      font-size: 16px;
-    }
-    .days-of-week div::before {
-        content: attr(data-abbreviated-name); /* Use abbreviated day names */
-        font-size: 12px; /* Adjust the font size for mobile */
-        display: block; /* Display abbreviated day names on mobile */
-      }
-      .days-of-week div {
-        font-size: 0; /* Hide the full day names on mobile */
-      }
-      .event {
-        font-size: 12px; /* Adjust the font size for mobile */
-        padding: 3px; /* Adjust the padding for mobile */
-        margin-top: 3px; /* Adjust the margin for mobile */
-      }
-    
-      .event-title {
-        font-weight: bold;
-      }
-    
-      .event-time {
-        font-size: 8px; /* Adjust the font size for mobile */
-        color: #666;
-      }
-  }
+}
 
-  .current-day {
-    border: 2px solid #007bff; /* Add a blue border to the current day */
-    color: inherit; /* Inherit the text color from the parent */
-    padding: 8px; /* Add some padding to maintain spacing */
+.current-day {
+  border: 2px solid #007bff;
+  color: inherit;
+  padding: 8px;
+}
+
+.popup {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+  overflow-y: auto;
+}
+
+.popup-close-button {
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ff0000;
+
+  &:hover,
+  &:focus {
+    transform: rotateZ(180deg);
+    background: hsl(216, 100, 40);
   }
+}
+
+.triangle-up {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -10px;
+  width: 10;
+  height: 10;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black;
+}

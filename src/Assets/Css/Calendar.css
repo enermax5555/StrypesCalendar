@@ -9,7 +9,13 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-
+h4{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+p{
+  font-size: 10px;
+}
 .header {
   font-size: 24px;
   font-weight: bold;
@@ -53,10 +59,11 @@
   display: flex;
   flex-direction: column;
   height: 100px;
+  overflow-y: auto;
 }
 
 .date-cell:hover {
-  border-color: #7d7c7c; /* Change to a darker color on hover */
+  border-color: #7d7c7c;
 }
 
 .date {
@@ -67,29 +74,26 @@
 
 .event {
   background-color: #f2f2f2;
-  padding: 5px;
+  padding: 2px;
   border-radius: 4px;
   margin-top: 5px;
   cursor: pointer;
 }
-
+.event:hover{
+  background-color: #3a3a3a;
+  color: white;
+  .event-time{
+    color: rgb(218, 215, 215);
+  }
+}
 .event-title {
   font-weight: bold;
+  font-size: 14px;
 }
 
 .event-time {
-  font-size: 12px;
+  font-size: 11px;
   color: #666;
-}
-
-.week.has-events {
-  background-color: #f90505;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.event-details {
-  margin-top: 20px;
 }
 
 .event-detail {
@@ -100,10 +104,16 @@
 }
 
 @media (max-width: 600px) {
-
+  .calendar {
+    padding: 0;
+  }
+  /* changing display on week is the feature to make the mobile version look better*/
+  /* .week {
+    justify-content: space-between;
+  } */
+  
   .date-cell {
-    height: 80px;
-
+    height: 160px;
   }
 
   .date {
@@ -118,21 +128,58 @@
 
   .days-of-week div {
     font-size: 0;
+    visibility: hidden;
   }
 
   .event {
-    font-size: 12px;
-    padding: 3px;
-    margin-top: 3px;
+    font-size: 14px; /* Increase the font size for events */
+    margin: 0;
+    padding: 5px; /* Add padding to event boxes */
+    border: 1px solid #ccc; /* Add a border to event boxes */
+    background-color: #f5f5f5; /* Add a light background color */
+    border-radius: 4px; /* Add rounded corners to event boxes */
+    margin-bottom: 5px; /* Add margin between events */
   }
 
   .event-title {
     font-weight: bold;
+    font-size: 12px; /* Slightly reduce the font size for event titles */
+    margin-bottom: 1px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflowing text */
   }
 
   .event-time {
-    font-size: 8px;
+    font-size: 12px; /* Increase the font size for event times */
     color: #666;
+  }
+
+  .popup {
+    position: absolute;
+    transform: translate(-0%, -50%);
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 150px;
+    overflow-y: auto;
+  }
+
+  .popup-content {
+    padding: 10px; /* Add padding to popup content for better spacing */
+  }
+
+  .event-description {
+    font-size: 14px; /* Increase font size for event descriptions */
+    margin-top: 5px; /* Add spacing between event details */
+  }
+  .triangle-up {
+   visibility: hidden;
   }
 }
 
@@ -142,7 +189,7 @@
   padding: 9px;
 }
 .current-day:hover {
-  border-color: #007bff; /* Change to a darker color on hover */
+  border-color: #007bff;
 }
 
 .popup {

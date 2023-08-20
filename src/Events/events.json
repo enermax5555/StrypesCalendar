@@ -1,30 +1,262 @@
 {
-    "2023-08-01": [
-      {
-        "title": "Meeting with Client",
-        "time": "10:00 AM - 11:00 AM",
-        "description": "His name is mark, from broadcast company!"
-      }
-    ],
-    "2023-08-05": [
-      {
-        "title": "Team Lunch",
-        "time": "12:30 PM - 1:30 PM",
-        "description": "Keep the good mood!"
-      }
-    ],
-    "2023-08-15": [
-      {
-        "title": "Project Deadline",
-        "time": "9:00 AM - 5:00 PM",
-        "description": "Nothing more then a DeadLine.."
-      }
-    ],
-    "2023-08-19": [
-      {
-        "title": "Major test",
-        "time": "9:00 AM - 11:00 AM",
-        "description": "Test it with TeamA and TeamB."
-      }
-    ]
-  }
+  "2023-08-01": [
+    {
+      "title": "Meeting with Client",
+      "time": "10:00 AM - 11:00 AM",
+      "description": "His name is Mark, from Broadcast Company!"
+    },
+    {
+      "title": "Meeting with Client",
+      "time": "11:30 AM - 01:00 PM",
+      "description": "His name is Geto, from ElevenIndustries."
+    },
+    {
+      "title": "Product Presentation",
+      "time": "03:00 PM - 04:30 PM",
+      "description": "Presenting new products to the team."
+    },
+    {
+      "title": "Team Meeting",
+      "time": "05:00 PM - 06:00 PM",
+      "description": "Discussing project updates."
+    },
+    {
+      "title": "Conference Call",
+      "time": "06:30 PM - 07:30 PM",
+      "description": "Discussion with partners."
+    },
+    {
+      "title": "Team Building",
+      "time": "08:00 PM - 09:30 PM",
+      "description": "Fun team-building activities."
+    }
+  ],
+  "2023-08-04": [
+    {
+      "title": "Team Lunch",
+      "time": "12:30 PM - 01:30 PM",
+      "description": "Keep the good mood!"
+    },
+    {
+      "title": "Team Building",
+      "time": "02:00 PM - 04:00 PM",
+      "description": "Engaging in team-building activities."
+    },
+    {
+      "title": "Brainstorming Session",
+      "time": "04:30 PM - 06:00 PM",
+      "description": "Generating new ideas for projects."
+    },
+    {
+      "title": "Project Review",
+      "time": "07:00 PM - 08:30 PM",
+      "description": "In-depth review of ongoing projects."
+    }
+  ],
+  "2023-08-15": [
+    {
+      "title": "Project Deadline",
+      "time": "09:00 AM - 05:00 PM",
+      "description": "Nothing more than a Deadline."
+    }
+  ],
+  "2023-08-18": [
+    {
+      "title": "Major Test",
+      "time": "09:00 AM - 11:00 AM",
+      "description": "Test it with Team A and Team B."
+    },
+    {
+      "title": "Team Meeting",
+      "time": "02:30 PM - 03:30 PM",
+      "description": "Discussing ongoing projects."
+    },
+    {
+      "title": "Project Review",
+      "time": "04:00 PM - 05:30 PM",
+      "description": "Review progress and discuss next steps."
+    }
+  ],
+  "2023-08-02": [
+    {
+      "title": "Project Review",
+      "time": "02:00 PM - 03:30 PM",
+      "description": "Review progress and discuss next steps."
+    },
+    {
+      "title": "Training Session",
+      "time": "04:00 PM - 05:30 PM",
+      "description": "Training on new software tools."
+    },
+    {
+      "title": "Team Meeting",
+      "time": "06:00 PM - 07:00 PM",
+      "description": "Weekly team update meeting."
+    },
+    {
+      "title": "Product Presentation",
+      "time": "07:30 PM - 09:00 PM",
+      "description": "Introducing new products."
+    }
+  ],
+  "2023-08-07": [
+    {
+      "title": "Training Session",
+      "time": "10:00 AM - 12:00 PM",
+      "description": "Training on new software tools."
+    },
+    {
+      "title": "Team Meeting",
+      "time": "01:30 PM - 02:30 PM",
+      "description": "Weekly team update meeting."
+    },
+    {
+      "title": "Product Development",
+      "time": "03:00 PM - 04:30 PM",
+      "description": "Working on new features."
+    },
+    {
+      "title": "Client Meeting",
+      "time": "05:00 PM - 06:00 PM",
+      "description": "Discussing client requirements."
+    }
+  ],
+  "2023-08-10": [
+    {
+      "title": "Team Meeting",
+      "time": "03:30 PM - 04:30 PM",
+      "description": "Weekly team update meeting."
+    },
+    {
+      "title": "Project Planning",
+      "time": "05:00 PM - 06:30 PM",
+      "description": "Planning upcoming projects."
+    },
+    {
+      "title": "Client Presentation",
+      "time": "07:00 PM - 08:30 PM",
+      "description": "Presenting project updates to the client."
+    }
+  ],
+  "2023-08-11": [
+    {
+      "title": "Conference Call",
+      "time": "11:00 AM - 12:00 PM",
+      "description": "Discussion with international partners."
+    },
+    {
+      "title": "Product Development",
+      "time": "01:30 PM - 03:00 PM",
+      "description": "Working on new features."
+    },
+    {
+      "title": "Project Review",
+      "time": "03:30 PM - 05:00 PM",
+      "description": "In-depth review of ongoing projects."
+    },
+    {
+      "title": "Client Meeting",
+      "time": "05:30 PM - 06:30 PM",
+      "description": "Discussing client requirements."
+    }
+  ],
+  "2023-08-25": [
+    {
+      "title": "Product Launch",
+      "time": "09:00 AM - 12:00 PM",
+      "description": "Launch new product to the market."
+    },
+    {
+      "title": "Team Meeting",
+      "time": "01:30 PM - 02:30 PM",
+      "description": "Weekly team update meeting."
+    },
+    {
+      "title": "Client Presentation",
+      "time": "03:00 PM - 04:30 PM",
+      "description": "Presenting project updates to the client."
+    },
+    {
+      "title": "Project Review",
+      "time": "05:00 PM - 06:30 PM",
+      "description": "In-depth review of ongoing projects."
+    }
+  ],
+  "2023-08-03": [
+    {
+      "title": "Marketing Strategy Meeting",
+      "time": "10:30 AM - 11:30 AM",
+      "description": "Discussing marketing plans and strategies."
+    },
+    {
+      "title": "Product Design Review",
+      "time": "02:00 PM - 03:30 PM",
+      "description": "Reviewing and improving product designs."
+    }
+  ],
+  "2023-08-08": [
+    {
+      "title": "Sales Meeting",
+      "time": "09:30 AM - 11:00 AM",
+      "description": "Discussing sales strategies and targets."
+    }
+  ],
+  "2023-08-09": [
+    {
+      "title": "Product Development Workshop",
+      "time": "02:00 PM - 04:00 PM",
+      "description": "Brainstorming and planning new product features."
+    }
+  ],
+  "2023-08-14": [
+    {
+      "title": "New Project Kickoff",
+      "time": "02:30 PM - 04:00 PM",
+      "description": "Starting a new project with a kickoff meeting."
+    }
+  ],
+  "2023-08-23": [
+    {
+      "title": "Project Status Update",
+      "time": "03:00 PM - 04:00 PM",
+      "description": "Updating the team on project progress."
+    }
+  ],
+  "2023-08-24": [
+    {
+      "title": "Client Consultation",
+      "time": "02:30 PM - 03:30 PM",
+      "description": "Consulting with a client on project requirements."
+    }
+  ],
+  "2023-08-26": [
+    {
+      "title": "Product Design Workshop",
+      "time": "09:00 AM - 12:00 PM",
+      "description": "Working on new product designs."
+    }
+  ],
+
+  "2023-08-28": [
+    {
+      "title": "Client Presentation",
+      "time": "02:30 PM - 04:00 PM",
+      "description": "Present project updates to the client."
+    },
+    {
+      "title": "Project Review",
+      "time": "04:30 PM - 06:00 PM",
+      "description": "In-depth review of ongoing projects."
+    },
+    {
+      "title": "Team Meeting",
+      "time": "06:30 PM - 07:30 PM",
+      "description": "Weekly team update meeting."
+    },
+    {
+      "title": "Product Launch",
+      "time": "08:00 PM - 09:30 PM",
+      "description": "Launch new product to the market."
+    }
+  ]
+}

@@ -133,6 +133,7 @@ const Calendar = () => {
 
   return (
     <div className="calendar">
+
       <h1>Strypes Calendar</h1>
       <div className="header">
         {/* To get the correct month/year! */}
@@ -145,22 +146,30 @@ const Calendar = () => {
           </div>
         ))}
       </div>
+
       {renderMonth()}
       {isPopUpOpen && (
+        
         <div className="popup" style={{ top: popupPosition.top + 30, left: popupPosition.left - 50 }}>
+          
           <div class="triangle-up"></div>
 
           <div className="popup-content">
             <button className="popup-close-button" onClick={() => setPopUpOpen(false)}>
               X
             </button>
+            
             {selectedDateEvents.map((event, index) => (
               <div key={index} className="event-detail">
+                <h4>{event.title}</h4>
+                <p>Time: {event.time}</p>
                 <div className="event-description">{event.description}</div>
               </div>
             ))}
+            
           </div>
         </div>
+        
       )}
     </div>
   );

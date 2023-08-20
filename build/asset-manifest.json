@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/StrypesCalendar/static/css/main.b70e3a50.css",
+    "main.css": "/StrypesCalendar/static/css/main.64c81cb1.css",
     "main.js": "/StrypesCalendar/static/js/main.65fb2509.js",
     "static/js/787.dfc08da9.chunk.js": "/StrypesCalendar/static/js/787.dfc08da9.chunk.js",
     "index.html": "/StrypesCalendar/index.html",
-    "main.b70e3a50.css.map": "/StrypesCalendar/static/css/main.b70e3a50.css.map",
+    "main.64c81cb1.css.map": "/StrypesCalendar/static/css/main.64c81cb1.css.map",
     "main.65fb2509.js.map": "/StrypesCalendar/static/js/main.65fb2509.js.map",
     "787.dfc08da9.chunk.js.map": "/StrypesCalendar/static/js/787.dfc08da9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b70e3a50.css",
+    "static/css/main.64c81cb1.css",
     "static/js/main.65fb2509.js"
   ]
 }

@@ -139,7 +139,7 @@
 .current-day {
   border: 2px solid #007bff;
   color: inherit;
-  padding: 8px;
+  padding: 9px;
 }
 .current-day:hover {
   border-color: #007bff; /* Change to a darker color on hover */

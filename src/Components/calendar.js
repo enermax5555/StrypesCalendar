@@ -53,10 +53,11 @@ const Calendar = () => {
         key={index}
         className="event"
         onClick={(e) => {
-          setSelectedDateEvents(dateEvents);
+          const clickedEvent = dateEvents[index];
+          setSelectedDateEvents([clickedEvent]);
           const dateCell = e.currentTarget.getBoundingClientRect();
           setPopupPosition({
-            top: dateCell.bottom,
+            bottom: dateCell.bottom + 10,
             left: dateCell.left,
           });
           setPopUpOpen(true);
@@ -70,7 +71,6 @@ const Calendar = () => {
 
   // Function to render a single date cell
   const renderDateCell = (date) => {
-    const currentDate = new Date();
     const isCurrentDay =
       date.getDate() === currentDate.getDate() &&
       date.getMonth() === currentDate.getMonth() &&
@@ -93,8 +93,6 @@ const Calendar = () => {
 
   // Function to render the entire month
   const renderMonth = () => {
-    const currentDate = new Date();
-    const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
     const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
     const weeks = [];
     let currentDay = new Date(firstDayOfMonth);
@@ -150,7 +148,7 @@ const Calendar = () => {
       {renderMonth()}
       {isPopUpOpen && (
         
-        <div className="popup" style={{ top: popupPosition.top + 30, left: popupPosition.left - 50 }}>
+        <div className="popup" style={{ top: popupPosition.bottom, left: popupPosition.left - 50 }}>
           
           <div class="triangle-up"></div>
 

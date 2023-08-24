@@ -21,8 +21,6 @@ p{
   font-weight: bold;
   margin-bottom: 20px;
 }
-
-
 .days-of-week {
   display: flex;
   flex-wrap: wrap;
@@ -80,6 +78,13 @@ p{
   cursor: pointer;
 }
 .event:hover{
+  background-color: #3a3a3a;
+  color: white;
+  .event-time{
+    color: rgb(218, 215, 215);
+  }
+}
+.event:focus{
   background-color: #3a3a3a;
   color: white;
   .event-time{

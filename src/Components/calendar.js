@@ -47,7 +47,6 @@ const Calendar = () => {
   const renderEvents = (date) => {
     const dateKey = date.toISOString().split('T')[0];
     const dateEvents = events[dateKey] || [];
-
     return dateEvents.map((event, index) => (
       <div
         key={index}
@@ -78,7 +77,7 @@ const Calendar = () => {
     // Debugging the event day
     const previousDay = new Date(date);
     previousDay.setDate(date.getDate() + 1);
-
+  
     return (
       <div
         key={date.toISOString()}
@@ -131,7 +130,6 @@ const Calendar = () => {
 
   return (
     <div className="calendar">
-
       <h1>Strypes Calendar</h1>
       <div className="header">
         {/* To get the correct month/year! */}
@@ -149,14 +147,11 @@ const Calendar = () => {
       {isPopUpOpen && (
         
         <div className="popup" style={{ top: popupPosition.bottom, left: popupPosition.left - 50 }}>
-          
-          <div class="triangle-up"></div>
-
+          <div className="triangle-up"></div>
           <div className="popup-content">
             <button className="popup-close-button" onClick={() => setPopUpOpen(false)}>
-              X
+             X
             </button>
-            
             {selectedDateEvents.map((event, index) => (
               <div key={index} className="event-detail">
                 <h4>{event.title}</h4>
@@ -167,7 +162,6 @@ const Calendar = () => {
             
           </div>
         </div>
-        
       )}
     </div>
   );
